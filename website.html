@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Emmett Gartner — Climate & Environment Reporter</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #1a1d2e;
@@ -32,7 +32,8 @@
 
   body {
     font-family: 'DM Sans', sans-serif;
-    background: var(--white);
+    background: radial-gradient(circle at top left, rgba(91,143,184,0.12), transparent 28%),
+                linear-gradient(180deg, #eef4fb 0%, #f7fbfd 28%, #eef6f7 100%);
     color: var(--ink);
     overflow-x: hidden;
   }
@@ -51,7 +52,7 @@
   nav.scrolled { box-shadow: 0 2px 24px rgba(30,40,80,0.07); }
 
   .nav-logo {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.05rem;
     letter-spacing: .03em;
     color: var(--ink);
@@ -60,7 +61,7 @@
   }
   .nav-logo span { display: block; font-size: .65rem; font-family: 'DM Mono', monospace; color: var(--slate); letter-spacing: .14em; text-transform: uppercase; font-weight: 300; margin-top: 1px; }
 
-  .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+  .nav-links { display: flex; justify-content: space-evenly; list-style: none; flex: 1; }
   .nav-links a {
     font-family: 'DM Mono', monospace;
     font-size: .72rem; font-weight: 400;
@@ -80,7 +81,7 @@
   /* ── HERO ── */
   #hero {
     min-height: 100vh;
-    padding: calc(var(--nav-h) + 80px) 5vw 80px;
+    padding: var(--nav-h) 5vw 20px;
     display: flex; flex-direction: column; justify-content: center;
     position: relative; overflow: hidden;
   }
@@ -88,9 +89,10 @@
   .hero-bg {
     position: absolute; inset: 0; z-index: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 70% 20%, rgba(59,111,160,0.10) 0%, transparent 65%),
-      radial-gradient(ellipse 60% 50% at 20% 80%, rgba(107,95,160,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 40% at 80% 80%, rgba(58,128,112,0.07) 0%, transparent 55%);
+      radial-gradient(ellipse 80% 60% at 70% 20%, rgba(59,111,160,0.14) 0%, transparent 60%),
+      radial-gradient(ellipse 65% 55% at 20% 75%, rgba(74,144,112,0.12) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 80% 80%, rgba(58,128,112,0.09) 0%, transparent 55%),
+      radial-gradient(circle at 30% 30%, rgba(91,143,184,0.10), transparent 40%);
   }
 
   /* Animated contour lines */
@@ -110,7 +112,7 @@
   }
 
   h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: clamp(3rem, 7vw, 6.5rem);
     line-height: 1.0;
     font-weight: 700;
@@ -129,7 +131,7 @@
   }
 
   .hero-ctas {
-    margin-top: 2.8rem; display: flex; gap: 1rem; flex-wrap: wrap;
+    margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;
     opacity: 0; animation: fadeUp .7s .7s forwards;
   }
 
@@ -179,7 +181,7 @@
   }
 
   h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 700; letter-spacing: -.02em;
     color: var(--ink); line-height: 1.1;
@@ -208,7 +210,7 @@
     border-left: 2px solid var(--blue); padding-left: 1rem;
   }
   .stat-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 2.2rem; font-weight: 700;
     color: var(--blue); line-height: 1;
   }
@@ -290,7 +292,7 @@
   .article-outlet.green { color: var(--green); }
 
   .article-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.18rem; font-weight: 700; line-height: 1.3;
     color: var(--ink); margin-bottom: .8rem;
   }
@@ -454,7 +456,7 @@
     flex-wrap: wrap; gap: 1rem;
   }
   .footer-name {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.1rem; color: var(--white);
   }
   .footer-copy {
@@ -509,8 +511,6 @@
 <!-- NAV -->
 <nav id="nav">
   <a href="#hero" class="nav-logo">
-    Emmett Gartner
-    <span>Climate & Environment Reporter</span>
   </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
@@ -545,10 +545,10 @@
   </svg>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">Field Reporter · Writer · Photographer</p>
-    <h1>Telling the<br><em>stories</em> our<br>planet needs.</h1>
+    <p class="hero-eyebrow">CLIMATE & ENVIRONMENT REPORTER</p>
+    <h1>EMMETT GARTNER </h1>
     <p class="hero-sub">
-      I report on climate change, environmental policy, and the communities living on the front lines of ecological crisis — for publications that believe journalism can matter.
+        I report stories that tie regulatory failures on pollution and climate to real-world consequences, plainly explain what those failures mean for affected community members, then prompt long-term fixes.
     </p>
     <div class="hero-ctas">
       <a href="#writing" class="btn btn-primary">Read My Work</a>
@@ -565,40 +565,18 @@
 <!-- ABOUT -->
 <section id="about">
   <p class="section-label reveal">About</p>
-  <h2 class="reveal">Reporting from<br>the field.</h2>
+  <h2 class="reveal">A career of<br>environmental storytelling.</h2>
 
   <div class="about-grid">
     <div class="about-text reveal">
       <p>
-        I'm <strong>Emmett Gartner</strong>, a climate and environment reporter with a decade of experience covering the intersection of ecology, policy, and human lives. My work takes me from flooded coastal towns to drought-stricken farmlands, from UN climate summits to community hearings.
-      </p>
-      <p>
-        Before going independent, I was a staff reporter at <strong>The Atlantic</strong> and a fellow at the <strong>Columbia School of Journalism</strong>. My writing has appeared in <em>The New Yorker, The Guardian, National Geographic,</em> and <em>ProPublica</em>.
-      </p>
-      <p>
-        I believe in rigorous, on-the-ground reporting. Climate change is the defining story of our era — I'm committed to covering it with the depth and nuance it demands.
-      </p>
+        I'm <strong>Emmett Gartner</strong>, a freelance climate and environment reporter based in <strong>Queens, NY</strong>. 
+        Having grown up on the Chesapeake Bay, I've long been followed stories of adaptation and accountability. <p>
 
-      <div class="about-stats">
-        <div class="stat">
-          <div class="stat-num">10+</div>
-          <div class="stat-label">Years Reporting</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">30+</div>
-          <div class="stat-label">Outlets Published</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">4</div>
-          <div class="stat-label">Press Awards</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">20+</div>
-          <div class="stat-label">Countries Covered</div>
-        </div>
-      </div>
-    </div>
-
+        <p> I spent the past three years as a staff writer for <i>The Maine Monitor</i> reporting on how government policies helped or failed Maine communities grappling with the consequences of pollution and climate change 
+     <p>Previously, I reported for the <i>Frederick News-Post</i> in western Maryland and witnessed first-hand how climate change is influencing drought and wildfires as a trail maintenance worker in Nevada and Oregon.
+     <p>My work has been published by the <i>Boston Globe</i>, <i>Washington Post</i>, Associated Press, and more. 
+        I'm available for long-form investigative reporting, feature writing, and quicker turnaround assignments. </p>
     <div class="about-sidebar reveal">
       <div class="sidebar-card blue">
         <p class="card-title">Areas of Focus</p>
@@ -606,27 +584,24 @@
           <li>Climate policy & legislation</li>
           <li>Coastal flooding & sea-level rise</li>
           <li>Wildfire & drought</li>
-          <li>Fossil fuel industry accountability</li>
+          <li>Industrial pollution</li>
           <li>Environmental justice</li>
         </ul>
       </div>
       <div class="sidebar-card purple">
-        <p class="card-title">Services</p>
+        <p class="card-title">Awards</p>
         <ul class="card-items">
-          <li>Long-form investigative reporting</li>
-          <li>Feature writing & profiles</li>
-          <li>Photo essays & documentary</li>
-          <li>Editorial consulting</li>
-          <li>Speaking & panels</li>
+          <li>First place environmental story: Maine Press Association 2025</li>
+          <li>Best reporting on local government: National Newspaper Association Foundation 2025</li>
+          <li>Student Group Award: Investigative Reporters and Editors 2022 </li>
         </ul>
       </div>
       <div class="sidebar-card teal">
-        <p class="card-title">Education & Recognition</p>
+        <p class="card-title">Education </p>
         <ul class="card-items">
-          <li>Columbia Journalism School Fellow</li>
-          <li>SPJ Environmental Award, 2022</li>
-          <li>IRE Award finalist, 2021</li>
-          <li>B.A. Environmental Studies, Yale</li>
+          <li>M.J., Investigative Reporting, University of Maryland, College Park, Dec. 2022.</li>
+          <li>Investigative Reporting Fellow for the Howard Center of Investigative Journalism, 2021-2023.</li>
+          <li>B.A., Environmental Studies, University of Vermont, May 2020.</li>
         </ul>
       </div>
     </div>
@@ -637,52 +612,52 @@
 <section id="writing">
   <p class="section-label reveal">Writing</p>
   <h2 class="reveal">Selected Work</h2>
-  <p class="writing-intro reveal">
-    A selection of recent reporting from the front lines of the climate crisis — from Pacific island nations watching their homelands disappear to fossil fuel executives facing congressional scrutiny.
-  </p>
+  <p class="writing-intro reveal">I take a community-centric approach covering sea-level rise, inland flooding, legacy industrial pollution, forestry, and energy issues.
 
   <div class="articles-grid">
 
-    <a href="#" class="article-card reveal">
-      <p class="article-outlet blue">The New Yorker</p>
-      <h3 class="article-title">The Last Farms of the Sacramento Delta</h3>
-      <p class="article-desc">As saltwater intrudes further inland each year, the farmers who've worked this land for generations face an impossible choice.</p>
-      <p class="article-meta">Feature · March 2025</p>
+    <a href="https://themainemonitor.org/maine-tightening-limits-forever-chemicals-drinking-water/" class="article-card reveal">
+      <p class="article-outlet blue">The Maine Monitor</p>
+      <h3 class="article-title">'Forever chemicals' in rural Maine</h3>
+      <p class="article-desc">Maine is tightening limits on “forever chemicals” in drinking water. Are communities ready?</p>
+      <p class="article-meta"> April 2026</p>
     </a>
 
-    <a href="#" class="article-card reveal">
-      <p class="article-outlet teal">National Geographic</p>
-      <h3 class="article-title">Nunavut on the Thaw</h3>
-      <p class="article-desc">In Canada's high Arctic, thawing permafrost is remaking the landscape — and threatening the communities built on it.</p>
-      <p class="article-meta">Photo Essay · Jan 2025</p>
+    <a href="https://themainemonitor.org/sunrise-serenity-unsafe-water/" class="article-card reveal">
+      <p class="article-outlet teal">The Maine Monitor</p>
+      <h3 class="article-title">Three years of unsafe water at a Maine mobile home park</h3>
+      <p class="article-desc">Residents have lived under a boil water order since 2023. Many have stopped drinking the water altogether.</p>
+      <p class="article-meta">April 2026</p>
     </a>
 
-    <a href="#" class="article-card reveal">
-      <p class="article-outlet purple">ProPublica</p>
-      <h3 class="article-title">Who Killed the Carbon Credit?</h3>
-      <p class="article-desc">An investigation into how the voluntary carbon market became riddled with phantom offsets — and who profited.</p>
-      <p class="article-meta">Investigation · Nov 2024</p>
+    <a href="https://themainemonitor.org/loggers-tariff-impact/" class="article-card reveal">
+      <p class="article-outlet purple">The Maine Monitor</p>
+      <h3 class="article-title">Maine loggers are used to hard times. Then came the tariffs.
+</h3>
+      <p class="article-desc">As the important winter logging season begins, people are seeing the values for their timber fall, while their costs to operate are going up.</p>
+      <p class="article-meta">Dec 2025</p>
     </a>
 
-    <a href="#" class="article-card reveal">
-      <p class="article-outlet blue">The Guardian</p>
-      <h3 class="article-title">Inside the IPCC's Most Contentious Report</h3>
-      <p class="article-desc">The scientists who wrote the landmark sixth assessment report on what it took — and what got left on the cutting-room floor.</p>
-      <p class="article-meta">Longform · Sep 2024</p>
+    <a href="https://themainemonitor.org/york-county-rebuilding-dunes/" class="article-card reveal">
+      <p class="article-outlet blue">The Maine Monitor</p>
+      <h3 class="article-title">A southern Maine county is rebuilding its destroyed dunes. Is it enough?</h3>
+      <p class="article-desc">York County is bolstering beaches and dunes washed away by storms, but full restoration remains out of reach.
+.</p>
+      <p class="article-meta"> Feb 2026</p>
     </a>
 
-    <a href="#" class="article-card reveal">
-      <p class="article-outlet green">The Atlantic</p>
-      <h3 class="article-title">The Wildfire That Never Ended</h3>
-      <p class="article-desc">The 2023 Cascades fire season burned into January. A reckoning with what "fire season" even means anymore.</p>
-      <p class="article-meta">Feature · Feb 2024</p>
+    <a href="https://themainemonitor.org/worst-august-wildfires-20-years/" class="article-card reveal">
+      <p class="article-outlet green">The Maine Monitor</p>
+      <h3 class="article-title">Drought fueled Maine's busiest wildfire season in decades</h3>
+      <p class="article-desc">Wildfire experts are cautious about tying a long-term increase in wildfires to the influence of climate change in Maine, but human activity remains a wild card.</p>
+      <p class="article-meta"> Sept 2025</p>
     </a>
 
-    <a href="#" class="article-card reveal">
-      <p class="article-outlet purple">Columbia Journalism Review</p>
-      <h3 class="article-title">How to Cover the End of the World</h3>
-      <p class="article-desc">A working reporter's guide to climate journalism: what we get wrong, what we avoid, and what we owe our readers.</p>
-      <p class="article-meta">Essay · Dec 2023</p>
+    <a href="https://themainemonitor.org/norridgewock-disaster-lessons-prep/" class="article-card reveal">
+      <p class="article-outlet purple">The Maine Monitor</p>
+      <h3 class="article-title">‘All emergencies are local until they’re not’</h3>
+      <p class="article-desc">Norridgewock was isolated when rivers surged in late 2023. Town officials don’t want to be in that position again.</p>
+      <p class="article-meta">Sept 2024</p>
     </a>
 
   </div>
@@ -699,111 +674,79 @@
   <p class="section-label reveal">Photography</p>
   <h2 class="reveal">Field Work</h2>
   <p class="photo-intro reveal">
-    Documentary and editorial photography from assignments across six continents. Available for print, digital, and exhibition licensing.
-  </p>
+A smattering of images from past assignments and travels.  </p>
 
   <div class="photo-grid reveal">
 
     <div class="photo-item">
       <div class="photo-inner ph1">
-        <svg class="photo-svg-art" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,100 Q50,60 100,80 T200,70" stroke="white" stroke-width="1.5" fill="none"/>
-          <path d="M0,110 Q60,75 120,90 T200,82" stroke="white" stroke-width="1" fill="none"/>
-          <circle cx="160" cy="30" r="20" fill="none" stroke="white" stroke-width="1"/>
-          <line x1="100" y1="0" x2="100" y2="150" stroke="white" stroke-width=".5" opacity=".5"/>
-        </svg>
+        <img src="Emmett_photojournalism/Gartner_ND_Paper_Rumford.jpg" alt="Industrial facility in rural Maine" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">Sacramento Delta, California — 2025</span>
+        <span class="photo-caption">ND Paper Mill in Rumford, Maine — 2024</span>
       </div>
     </div>
 
     <div class="photo-item">
       <div class="photo-inner ph2">
-        <svg class="photo-svg-art" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="100,20 40,130 160,130" stroke="white" stroke-width="1.2" fill="none"/>
-          <polygon points="100,50 60,130 140,130" stroke="white" stroke-width=".8" fill="none" opacity=".6"/>
-        </svg>
+        <img src="Emmett_photojournalism/East-Elm-Street-Dam.jpg" alt="Waterfall at dam" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">Baffin Island, Nunavut — 2025</span>
+        <span class="photo-caption">The Royal River in Yarmouth, Maine — 2025</span>
       </div>
     </div>
 
     <div class="photo-item">
       <div class="photo-inner ph3">
-        <svg class="photo-svg-art" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="10" width="180" height="130" stroke="white" stroke-width=".8" fill="none" rx="2"/>
-          <line x1="10" y1="80" x2="190" y2="80" stroke="white" stroke-width=".6" opacity=".6"/>
-          <circle cx="100" cy="75" r="30" stroke="white" stroke-width="1" fill="none"/>
-        </svg>
+        <img src="Emmett_photojournalism/Gartner-Pips.jpeg" alt="Annapolis flood" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">Kiribati, Pacific Ocean — 2024</span>
+        <span class="photo-caption">Flooding in downtown Annapolis, Md. — 2021</span>
       </div>
     </div>
 
     <div class="photo-item">
       <div class="photo-inner ph4">
-        <svg class="photo-svg-art" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20,140 Q50,100 80,120 T120,90 T160,110 T200,80" stroke="white" stroke-width="1.5" fill="none"/>
-          <path d="M20,130 Q60,95 90,110 T140,85 T190,100" stroke="white" stroke-width=".8" fill="none" opacity=".5"/>
-        </svg>
+        <img src="Emmett_photojournalism/ED261194-95AE-4E2E-AC89-C8D8F76E0ABF.jpg" alt="Mountain landscape" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">Cascade Range, Oregon — 2024</span>
+        <span class="photo-caption">Mount Moriah in the northern Snake Range of White Pine County, Nev. — 2022</span>
       </div>
     </div>
 
     <div class="photo-item">
       <div class="photo-inner ph5">
-        <svg class="photo-svg-art" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="100" cy="75" r="50" stroke="white" stroke-width="1" fill="none"/>
-          <circle cx="100" cy="75" r="35" stroke="white" stroke-width=".7" fill="none" opacity=".6"/>
-          <circle cx="100" cy="75" r="20" stroke="white" stroke-width=".5" fill="none" opacity=".4"/>
-        </svg>
+        <img src="Emmett_photojournalism/DSC_0948.jpg" alt="Arctic tundra landscape" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">Greenland Ice Sheet — 2023</span>
+        <span class="photo-caption">The table below Mount Moriah's summit in White Pine County, Nev. — 2022</span>
       </div>
     </div>
 
     <div class="photo-item">
       <div class="photo-inner ph6">
-        <svg class="photo-svg-art" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,80 L200,80" stroke="white" stroke-width="1" opacity=".6"/>
-          <path d="M0,60 Q50,40 100,55 T200,50" stroke="white" stroke-width="1.2" fill="none"/>
-          <path d="M0,100 Q60,85 120,95 T200,90" stroke="white" stroke-width=".7" fill="none" opacity=".5"/>
-        </svg>
+        <img src="Emmett_photojournalism/Bucksport-dam-hearing-sign.jpg" alt="Community hearing on dam resilience" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">Amazon Basin, Brazil — 2023</span>
+        <span class="photo-caption">Public hearing on dam abandonment proposal in Bucksport, Maine — 2024</span>
       </div>
     </div>
 
     <div class="photo-item">
       <div class="photo-inner ph7">
-        <svg class="photo-svg-art" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-          <rect x="30" y="30" width="60" height="90" stroke="white" stroke-width="1" fill="none" rx="1"/>
-          <rect x="110" y="50" width="60" height="70" stroke="white" stroke-width="1" fill="none" rx="1"/>
-          <line x1="0" y1="140" x2="200" y2="140" stroke="white" stroke-width=".8"/>
-        </svg>
+        <img src="Emmett_photojournalism/DSC_0172.JPG" alt="Waterfall and rapids" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">Houston, Texas — Flooding — 2022</span>
+        <span class="photo-caption">The frozen coastline of Camp Ellis in Saco, Maine — 2026</span>
       </div>
     </div>
 
     <div class="photo-item">
       <div class="photo-inner ph8">
-        <svg class="photo-svg-art" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0,120 Q30,80 60,100 T120,70 T180,90 T200,75" stroke="white" stroke-width="1.5" fill="none"/>
-          <path d="M0,130 Q40,95 80,110 T150,85 T200,95" stroke="white" stroke-width=".8" fill="none" opacity=".5"/>
-          <line x1="0" y1="150" x2="200" y2="150" stroke="white" stroke-width="1" opacity=".3"/>
-        </svg>
+        <img src="Emmett_photojournalism/Gartner-FP-3.jpeg" alt="PG county" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">Marshall Islands — 2022</span>
+        <span class="photo-caption">As Prince George's County prepares for climate change, resident James McDowell Jr. has ideas to make it equitable. Adelphi, Md. 2021 </span>
       </div>
     </div>
 
@@ -818,15 +761,15 @@
   <div class="contact-grid">
     <div class="reveal">
       <p class="contact-intro">
-        Available for commissions, assignments, and editorial projects. I work with magazines, newspapers, NGOs, and documentary outlets. Response time is typically within 48 hours.
+        Available for long-form investigative reporting, feature writing, and quicker turnaround assignments. I have experience with Datawrapper, Flourish, audio reporting, and photojournalism for data visualization and multimedia storytelling. 
       </p>
 
       <div class="contact-channels">
-        <a href="mailto:emmett@emmettgartner.com" class="channel">
+        <a href="mailto:emmett.a.gartner@gmail.com" class="channel">
           <div class="channel-icon">✉</div>
           <div class="channel-text">
             <span class="channel-label">Email</span>
-            emmett@emmettgartner.com
+            emmett.a.gartner@gmail.com
           </div>
         </a>
         <a href="https://twitter.com" class="channel" target="_blank">
@@ -843,11 +786,11 @@
             linkedin.com/in/emmettgartner
           </div>
         </a>
-        <a href="#" class="channel">
-          <div class="channel-icon">📄</div>
+        <a href="https://instagram.com/emmettgartnerphotography" class="channel" target="_blank">
+          <div class="channel-icon">📷</div>
           <div class="channel-text">
-            <span class="channel-label">Press Kit & CV</span>
-            Download media kit
+            <span class="channel-label">Instagram</span>
+            @emmettgartnerphotography
           </div>
         </a>
       </div>
