@@ -81,7 +81,7 @@
   /* ── HERO ── */
   #hero {
     min-height: 100vh;
-    padding: var(--nav-h) 5vw 20px;
+    padding: calc(var(--nav-h) + 1.5rem) 5vw 20px;
     display: flex; flex-direction: column; justify-content: center;
     position: relative; overflow: hidden;
   }
@@ -101,7 +101,7 @@
     pointer-events: none;
   }
 
-  .hero-content { position: relative; z-index: 1; max-width: 820px; }
+  .hero-content { position: relative; z-index: 1; max-width: 1000px; }
 
   .hero-eyebrow {
     font-family: 'DM Mono', monospace;
@@ -126,13 +126,38 @@
     margin-top: 1.8rem;
     font-size: 1.08rem; font-weight: 300;
     color: var(--ink-soft); line-height: 1.7;
-    max-width: 520px;
+    max-width: 760px;
     opacity: 0; animation: fadeUp .7s .55s forwards;
   }
 
   .hero-ctas {
     margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;
     opacity: 0; animation: fadeUp .7s .7s forwards;
+  }
+
+  .hero-photo {
+    margin-top: 2rem;
+    width: min(100%, 620px);
+    max-width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 60px rgba(20, 35, 65, 0.12);
+    opacity: 0; animation: fadeUp .7s .8s forwards;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-caption {
+    margin-top: .75rem;
+    font-family: 'DM Mono', monospace;
+    font-size: .8rem;
+    letter-spacing: .12em;
+    color: var(--slate);
+  }
+  .hero-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   .btn {
@@ -170,7 +195,7 @@
   @keyframes scrollPulse { 0%,100%{opacity:.4} 50%{opacity:1} }
 
   /* ── SECTIONS ── */
-  section { padding: 100px 5vw; }
+  section { padding: 70px 4vw; }
   section:nth-child(even) { background: var(--fog); }
 
   .section-label {
@@ -191,11 +216,12 @@
   /* ── ABOUT ── */
   #about .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2.3fr 1fr;
     gap: 5vw; align-items: start;
-    max-width: 1100px;
+    max-width: 1300px;
   }
 
+  .about-text { max-width: 100%; }
   .about-text p {
     font-size: 1.05rem; line-height: 1.8; font-weight: 300;
     color: var(--ink-soft); margin-bottom: 1.2rem;
@@ -251,7 +277,7 @@
 
   /* ── WRITING ── */
   #writing .writing-intro {
-    max-width: 600px;
+    max-width: 900px;
     font-size: 1.05rem; font-weight: 300; line-height: 1.8;
     color: var(--ink-soft); margin-bottom: 3rem;
   }
@@ -315,7 +341,7 @@
 
   /* ── PHOTOGRAPHY ── */
   #photography .photo-intro {
-    max-width: 600px;
+    max-width: 900px;
     font-size: 1.05rem; font-weight: 300; line-height: 1.8;
     color: var(--ink-soft); margin-bottom: 3rem;
   }
@@ -384,7 +410,7 @@
   /* ── CONTACT ── */
   #contact .contact-grid {
     display: grid; grid-template-columns: 1fr 1fr;
-    gap: 6vw; align-items: start; max-width: 1000px;
+    gap: 6vw; align-items: start; max-width: 1100px;
   }
 
   .contact-intro {
@@ -554,11 +580,11 @@
       <a href="#writing" class="btn btn-primary">Read My Work</a>
       <a href="#contact" class="btn btn-ghost">Get In Touch</a>
     </div>
-  </div>
 
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    Scroll
+    <div class="hero-photo">
+      <img src="Emmett_photojournalism/Hoffman-Loggers-10.jpg" alt="Logging crew by a river in Maine">
+    </div>
+    <p class="hero-caption">Photo by Garrick Hoffman</p>
   </div>
 </section>
 
@@ -689,7 +715,7 @@ A smattering of images from past assignments and travels.  </p>
 
     <div class="photo-item">
       <div class="photo-inner ph2">
-        <img src="Emmett_photojournalism/East-Elm-Street-Dam.jpg" alt="Waterfall at dam" style="width:100%;height:100%;object-fit:cover;">
+        <img src="Emmett_photojournalism/Gartner_East_Elm_Street_Dam_1.jpg" alt="Waterfall at dam" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
         <span class="photo-caption">The Royal River in Yarmouth, Maine — 2025</span>
@@ -707,7 +733,7 @@ A smattering of images from past assignments and travels.  </p>
 
     <div class="photo-item">
       <div class="photo-inner ph4">
-        <img src="Emmett_photojournalism/ED261194-95AE-4E2E-AC89-C8D8F76E0ABF.jpg" alt="Mountain landscape" style="width:100%;height:100%;object-fit:cover;">
+        <img src="Emmett_photojournalism/Gartner_Mt_Moriah_2.jpg" alt="Mountain landscape" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
         <span class="photo-caption">Mount Moriah in the northern Snake Range of White Pine County, Nev. — 2022</span>
@@ -716,16 +742,16 @@ A smattering of images from past assignments and travels.  </p>
 
     <div class="photo-item">
       <div class="photo-inner ph5">
-        <img src="Emmett_photojournalism/DSC_0948.jpg" alt="Arctic tundra landscape" style="width:100%;height:100%;object-fit:cover;">
+        <img src="Emmett_photojournalism/Gartner_Camp_Ellis_1.JPG" alt="Arctic tundra landscape" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">The table below Mount Moriah's summit in White Pine County, Nev. — 2022</span>
+        <span class="photo-caption">The frozen coastline of Camp Ellis in Saco, Maine — 2026</span>
       </div>
     </div>
 
     <div class="photo-item">
       <div class="photo-inner ph6">
-        <img src="Emmett_photojournalism/Bucksport-dam-hearing-sign.jpg" alt="Community hearing on dam resilience" style="width:100%;height:100%;object-fit:cover;">
+        <img src="Emmett_photojournalism/Gartner_Bucksport-dam-hearing-sign.jpg" alt="Community hearing on dam resilience" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
         <span class="photo-caption">Public hearing on dam abandonment proposal in Bucksport, Maine — 2024</span>
@@ -734,10 +760,10 @@ A smattering of images from past assignments and travels.  </p>
 
     <div class="photo-item">
       <div class="photo-inner ph7">
-        <img src="Emmett_photojournalism/DSC_0172.JPG" alt="Waterfall and rapids" style="width:100%;height:100%;object-fit:cover;">
+        <img src="Emmett_photojournalism/Gartner_Mt_Moriah_1.jpg" alt="Moriah 2" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="photo-overlay">
-        <span class="photo-caption">The frozen coastline of Camp Ellis in Saco, Maine — 2026</span>
+        <span class="photo-caption">The table below Mount Moriah's summit in White Pine County, Nev. — 2022</span>
       </div>
     </div>
 
